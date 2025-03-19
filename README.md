@@ -1,3 +1,21 @@
+# @unes/es5-ext
+
+A fork of [`es5-ext`](https://github.com/medikoo/es5-ext) which has no postinstall script.
+
+It will rebase and try to release in order to sync with the upstream every day, see [.github/workflows/rebase-upstream.yml](.github/workflows/rebase-upstream.yml) for details.
+
+And also you can take https://github.com/medikoo/es5-ext/issues/186 to understand why this forked project exists.
+
+## Installation
+
+```bash
+$ npm install -D es5-ext@npm:@unes/es5-ext@latest
+```
+
+You may also need to use `overrides` for `npm`, or `resolutions` for `pnpm` or `yarn`.
+
+---
+
 [![Build status][build-image]][build-url]
 [![Tests coverage][cov-image]][cov-url]
 [![npm version][npm-image]][npm-url]
@@ -119,19 +137,19 @@ Object.defineProperty(Function.prototype, "partial", {
   value: require("es5-ext/function/#/partial"),
   configurable: true,
   enumerable: false,
-  writable: true
+  writable: true,
 });
 Object.defineProperty(Array.prototype, "flatten", {
   value: require("es5-ext/array/#/flatten"),
   configurable: true,
   enumerable: false,
-  writable: true
+  writable: true,
 });
 Object.defineProperty(String.prototype, "capitalize", {
   value: require("es5-ext/string/#/capitalize"),
   configurable: true,
   enumerable: false,
-  writable: true
+  writable: true,
 });
 ```
 

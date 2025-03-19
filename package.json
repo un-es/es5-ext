@@ -1,8 +1,12 @@
 {
-	"name": "es5-ext",
+	"name": "@unes/es5-ext",
+	"type": "commonjs",
 	"version": "0.10.64",
 	"description": "ECMAScript extensions and shims",
 	"author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+	"maintainers": [
+		"JounQin <admin@1stg.me> (https://www.1stG.me)"
+	],
 	"keywords": [
 		"ecmascript",
 		"ecmascript5",
@@ -29,6 +33,9 @@
 		"next-tick": "^1.1.0"
 	},
 	"devDependencies": {
+		"@changesets/changelog-github": "^0.5.1",
+		"@changesets/cli": "^2.28.1",
+		"clean-pkg-json": "^1.2.1",
 		"eslint": "^8.57.0",
 		"eslint-config-medikoo": "^4.2.0",
 		"git-list-updated": "^1.2.1",
@@ -113,15 +120,16 @@
 		"coverage": "nyc npm test",
 		"lint": "eslint --ignore-path=.gitignore .",
 		"lint:updated": "pipe-git-updated --base=main --ext=js -- eslint --ignore-pattern '!*'",
-		"postinstall": " node -e \"try{require('./_postinstall')}catch(e){}\" || exit 0",
 		"prettier-check": "prettier -c --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
 		"prettier-check:updated": "pipe-git-updated --base=main --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
 		"prettify": "prettier --write --ignore-path .gitignore \"**/*.{css,html,js,json,md,yaml,yml}\"",
 		"prettify:updated": "pipe-git-updated ---base=main -ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier --write",
-		"test": "node ./node_modules/tad/bin/tad"
+		"test": "node ./node_modules/tad/bin/tad",
+		"release": "clean-pkg-json && changeset publish"
 	},
 	"engines": {
 		"node": ">=0.10"
 	},
-	"license": "ISC"
+	"license": "ISC",
+	"packageManager": "yarn@4.7.0"
 }
