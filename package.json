@@ -1,7 +1,7 @@
 {
 	"name": "@unes/es5-ext",
 	"type": "commonjs",
-	"version": "0.10.64",
+	"version": "0.10.64-1",
 	"description": "ECMAScript extensions and shims",
 	"author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
 	"maintainers": [

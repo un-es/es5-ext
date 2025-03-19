@@ -1,5 +1,8 @@
+/.changeset
 /.editorconfig
 /.github
+/.yarn
+/.yarnrc.yml
 /.testignore
 /CHANGES
 /commitlint.config.js
